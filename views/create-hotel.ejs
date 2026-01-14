@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Hotel</title>
+  </head>
+  <body>
+    <%- include('navbar') %>
+    <h1>Create New Hotel</h1>
+
+
+
+    <form action="/hotels" method="post">
+      <label for="hotelName">Hotel Name:</label>
+      <input type="text" name="hotelName" id="hotelName" />
+
+      <label for="stars">Stars:</label>
+      <input type="number" name="stars" id="stars" />
+
+      <label for="city">City:</label>
+      <input type="text" name="city" id="city" />
+
+      <button>Create</button>
+    </form>
+    <br />
+  </body>
+</html>

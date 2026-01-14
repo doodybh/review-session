@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hotels</title>
-</head>
-<body>
+  </head>
+  <body>
+    <%- include('navbar') %>
+
     <h1>Hotels</h1>
-</body>
+    <% allHotels.forEach(oneHotel => { %>
+        <p><b>Name: <%= oneHotel.hotelName %></b></p>
+        <p>Stars: <%= oneHotel.stars %></p>
+        <p>City: <%= oneHotel.city %></p>
+        <a href="/hotels/<%= oneHotel._id %>">Details</a>
+        <% }) %>
+  </body>
 </html>
